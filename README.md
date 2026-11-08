@@ -45,6 +45,28 @@ Users should be able to:
 
 ### What I learned
 
+#### Custom data attributes (`data-url`)
+
+A `data-` attribute lets me store extra information on an HTML element. The browser ignores it, so it does not change how the element looks or behaves. I used it to keep the address of each social button on the button itself:
+
+```html
+<button class="link" type="button" data-url="https://github.com">
+  <span class="link-text">GitHub</span>
+</button>
+```
+
+In JavaScript, I read it with `dataset`:
+
+```js
+button.dataset.url; // "https://github.com"
+```
+
+- The part after `data-` becomes the property name: `data-url` becomes `dataset.url`.
+- A name with dashes becomes camelCase: `data-link-name` becomes `dataset.linkName`.
+- The value is always a string.
+- The same script works for all five buttons, because each one carries its own address.
+- The attributes are visible in the page source, so they must never hold secrets.
+
 ### AI Collaboration
 
 This is a project where I act as the Product Engineer, not the developer. I define the requirements and validate every decision, and Claude Code writes the code.

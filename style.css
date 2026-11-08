@@ -125,18 +125,36 @@ body {
 
 .link {
   display: block;
+  width: 100%;
   padding: var(--spacing-150);
+  border: none;
   background-color: var(--color-grey-700);
   border-radius: 8px;
   color: var(--color-white);
+  font: inherit;
   font-weight: 700;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .link:hover,
 .link:focus-visible {
   background-color: var(--color-green);
   color: var(--color-grey-700);
+}
+
+/* Fade used by script.js when the button text changes */
+.link-text {
+  transition: opacity 0.3s ease;
+}
+
+.link-text.is-fading {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-text {
+    transition: none;
+  }
 }
 
 /* ========== TABLET ========== */
