@@ -1,0 +1,23 @@
+# Design files (do not share)
+*.fig
+
+# Private docs (anything not meant to be shared publicly)
+docs/
+CLAUDE.md
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor settings
+.claude/
+
+# Logs
+*.log
+
+# Environment variables
+.env

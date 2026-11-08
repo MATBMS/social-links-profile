@@ -1,0 +1,57 @@
+/* ========== RESET ========== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== FONTS ========== */
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========== CUSTOM PROPERTIES ========== */
+
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-green: #c4f82a;
+  --color-grey-900: #141414;
+  --color-grey-800: #1f1f1f;
+  --color-grey-700: #333333;
+
+  /* Typography */
+  --font-family: "Inter", sans-serif;
+  --font-size-preset-1: 2.5rem; /* 40px */
+  --font-size-preset-2: 1.5rem; /* 24px */
+
+  /* Spacing */
+  --spacing-50: 0.25rem; /* 4px */
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-150: 0.75rem; /* 12px */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-500: 2.5rem; /* 40px */
+}
