@@ -44,8 +44,8 @@
 
   /* Typography */
   --font-family: "Inter", sans-serif;
-  --font-size-preset-1: 2.5rem; /* 40px */
-  --font-size-preset-2: 1.5rem; /* 24px */
+  --font-size-preset-1: 1.5rem; /* 24px (mobile) */
+  --font-size-preset-2: 0.875rem; /* 14px (mobile) */
 
   /* Spacing */
   --spacing-50: 0.25rem; /* 4px */
@@ -54,4 +54,99 @@
   --spacing-200: 1rem; /* 16px */
   --spacing-300: 1.5rem; /* 24px */
   --spacing-500: 2.5rem; /* 40px */
+}
+
+/* ========== BASE ========== */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-300);
+  background-color: var(--color-grey-900);
+  color: var(--color-white);
+  font-family: var(--font-family);
+  font-size: var(--font-size-preset-2);
+  line-height: 1.5;
+}
+
+/* ========== CARD ========== */
+
+.card {
+  width: 100%;
+  max-width: 24rem; /* 384px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-300);
+  padding: var(--spacing-300);
+  background-color: var(--color-grey-800);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.card-avatar {
+  width: 5.5rem; /* 88px */
+  height: 5.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-50);
+}
+
+.card-name {
+  font-size: var(--font-size-preset-1);
+  font-weight: 600;
+}
+
+.card-location {
+  color: var(--color-green);
+  font-weight: 700;
+}
+
+.card-bio {
+  font-weight: 400;
+}
+
+/* ========== LINKS ========== */
+
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+  list-style: none;
+}
+
+.link {
+  display: block;
+  padding: var(--spacing-150);
+  background-color: var(--color-grey-700);
+  border-radius: 8px;
+  color: var(--color-white);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus-visible {
+  background-color: var(--color-green);
+  color: var(--color-grey-700);
+}
+
+/* ========== TABLET ========== */
+
+@media (min-width: 48rem) { /* 768px */
+  body {
+    padding: 0 var(--spacing-500);
+  }
+
+  .card {
+    padding: var(--spacing-500);
+  }
 }
